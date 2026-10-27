@@ -1,0 +1,16 @@
+name: training_lakehouse
+version: 1.0.0
+config-version: 2
+profile: training_lakehouse
+model-paths: ["models"]
+models:
+  training_lakehouse:
+    staging:
+      +schema: staging
+      +materialized: view
+    intermediate:
+      +schema: intermediate
+      +materialized: table
+    marts:
+      +schema: marts
+      +materialized: table

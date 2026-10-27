@@ -1,0 +1,337 @@
+[0m09:33:51.900636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b464f286d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b464f286e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b464f23e650>]}
+
+
+============================== 09:33:51.908664 | ff1ad511-c816-474f-8e75-ad2f1eef7b92 ==============================
+[0m09:33:51.908664 [info ] [MainThread]: Running with dbt=1.9.0
+[0m09:33:51.910736 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/app', 'version_check': 'True', 'debug': 'False', 'log_path': '/usr/app/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug --profiles-dir /usr/app', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:33:51.928230 [info ] [MainThread]: dbt version: 1.9.0
+[0m09:33:51.933913 [info ] [MainThread]: python version: 3.11.2
+[0m09:33:51.936764 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m09:33:51.938539 [info ] [MainThread]: os info: Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.31
+[0m09:33:52.030090 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m09:33:52.031445 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m09:33:52.032356 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m09:33:52.077555 [info ] [MainThread]: Using profiles dir at /usr/app
+[0m09:33:52.081171 [info ] [MainThread]: Using profiles.yml file at /usr/app/profiles.yml
+[0m09:33:52.083004 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt_project.yml
+[0m09:33:52.084263 [info ] [MainThread]: adapter type: spark
+[0m09:33:52.085372 [info ] [MainThread]: adapter version: 1.9.0
+[0m09:33:52.162834 [info ] [MainThread]: Configuration:
+[0m09:33:52.164222 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m09:33:52.165430 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m09:33:52.166645 [info ] [MainThread]: Required dependencies:
+[0m09:33:52.168963 [debug] [MainThread]: Executing "git --help"
+[0m09:33:52.173231 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m09:33:52.174500 [debug] [MainThread]: STDERR: "b''"
+[0m09:33:52.175364 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m09:33:52.176458 [info ] [MainThread]: Connection:
+[0m09:33:52.177605 [info ] [MainThread]:   host: spark-thrift
+[0m09:33:52.178857 [info ] [MainThread]:   port: 10000
+[0m09:33:52.180035 [info ] [MainThread]:   cluster: None
+[0m09:33:52.181710 [info ] [MainThread]:   endpoint: None
+[0m09:33:52.183422 [info ] [MainThread]:   schema: lakehouse
+[0m09:33:52.186093 [info ] [MainThread]:   organization: 0
+[0m09:33:52.188479 [info ] [MainThread]: Registered adapter: spark=1.9.0
+[0m09:33:52.230385 [debug] [MainThread]: Acquiring new spark connection 'debug'
+[0m09:33:52.231427 [debug] [MainThread]: Using spark connection "debug"
+[0m09:33:52.232178 [debug] [MainThread]: On debug: select 1 as id
+[0m09:33:52.232831 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:33:52.236382 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:33:52.239751 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (0 of 10)
+[0m09:34:02.248644 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:34:02.254613 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (1 of 10)
+[0m09:34:12.272525 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:34:12.277526 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (2 of 10)
+[0m09:34:22.287764 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:34:22.293242 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (3 of 10)
+[0m09:34:32.296656 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:34:32.298304 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (4 of 10)
+[0m09:34:42.296325 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:34:42.298197 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (5 of 10)
+[0m09:34:52.303028 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:34:52.305244 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (6 of 10)
+[0m09:34:57.684739 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e759026d750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e759026d9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e759026cf10>]}
+
+
+============================== 09:34:57.687813 | d9db0d34-e2fc-4396-9822-ec0e6247bf8d ==============================
+[0m09:34:57.687813 [info ] [MainThread]: Running with dbt=1.9.0
+[0m09:34:57.688978 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/app', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/usr/app/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug --profiles-dir /usr/app', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:34:57.696423 [info ] [MainThread]: dbt version: 1.9.0
+[0m09:34:57.698951 [info ] [MainThread]: python version: 3.11.2
+[0m09:34:57.700192 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m09:34:57.701254 [info ] [MainThread]: os info: Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.31
+[0m09:34:57.758788 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m09:34:57.760335 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m09:34:57.761368 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m09:34:57.787357 [info ] [MainThread]: Using profiles dir at /usr/app
+[0m09:34:57.789835 [info ] [MainThread]: Using profiles.yml file at /usr/app/profiles.yml
+[0m09:34:57.793346 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt_project.yml
+[0m09:34:57.794872 [info ] [MainThread]: adapter type: spark
+[0m09:34:57.796218 [info ] [MainThread]: adapter version: 1.9.0
+[0m09:34:57.880639 [info ] [MainThread]: Configuration:
+[0m09:34:57.882645 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m09:34:57.885666 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m09:34:57.887133 [info ] [MainThread]: Required dependencies:
+[0m09:34:57.888227 [debug] [MainThread]: Executing "git --help"
+[0m09:34:57.890375 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m09:34:57.891338 [debug] [MainThread]: STDERR: "b''"
+[0m09:34:57.892045 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m09:34:57.892915 [info ] [MainThread]: Connection:
+[0m09:34:57.894143 [info ] [MainThread]:   host: spark-thrift
+[0m09:34:57.895675 [info ] [MainThread]:   port: 10000
+[0m09:34:57.898306 [info ] [MainThread]:   cluster: None
+[0m09:34:57.900173 [info ] [MainThread]:   endpoint: None
+[0m09:34:57.901682 [info ] [MainThread]:   schema: lakehouse
+[0m09:34:57.902641 [info ] [MainThread]:   organization: 0
+[0m09:34:57.903823 [info ] [MainThread]: Registered adapter: spark=1.9.0
+[0m09:34:57.940102 [debug] [MainThread]: Acquiring new spark connection 'debug'
+[0m09:34:57.941072 [debug] [MainThread]: Using spark connection "debug"
+[0m09:34:57.941818 [debug] [MainThread]: On debug: select 1 as id
+[0m09:34:57.942474 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:34:57.944220 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:34:57.945474 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (0 of 10)
+[0m09:35:02.316144 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:35:02.324148 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (7 of 10)
+[0m09:35:07.948666 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:35:07.959913 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (1 of 10)
+[0m09:35:12.330781 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:35:12.334692 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (8 of 10)
+[0m09:35:17.962802 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:35:17.969367 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (2 of 10)
+[0m09:35:22.339055 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:35:22.344137 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (9 of 10)
+[0m09:35:27.979062 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:35:27.983337 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (3 of 10)
+[0m09:35:32.347515 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:35:32.349316 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (10 of 10)
+[0m09:35:37.988443 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:35:37.990562 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (4 of 10)
+[0m09:35:42.352555 [debug] [MainThread]: Spark adapter: Error while running:
+select 1 as id
+[0m09:35:42.356427 [debug] [MainThread]: Spark adapter: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:35:42.359122 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m09:35:42.360743 [info ] [MainThread]: [31m1 check failed:[0m
+[0m09:35:42.363773 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Runtime Error
+  Could not connect to any of [('172.19.0.9', 10000)]
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m09:35:42.369335 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 110.516335, "process_in_blocks": "0", "process_kernel_time": 0.367382, "process_mem_max_rss": "100304", "process_out_blocks": "0", "process_user_time": 1.394472}
+[0m09:35:42.371519 [debug] [MainThread]: Command `dbt debug` failed at 09:35:42.371213 after 110.52 seconds
+[0m09:35:42.374249 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m09:35:42.375275 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b464f240250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b464f29b050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b4652a20f10>]}
+[0m09:35:42.376152 [debug] [MainThread]: Flushing usage events
+[0m09:35:43.367505 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:35:47.992696 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:35:47.997167 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (5 of 10)
+[0m09:35:58.002725 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:35:58.005610 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (6 of 10)
+[0m09:36:08.010146 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:36:08.012094 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (7 of 10)
+[0m09:36:18.011258 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:36:18.012840 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (8 of 10)
+[0m09:36:26.669450 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x797ead49e490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x797ead49c090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x797ead49d350>]}
+
+
+============================== 09:36:26.672314 | b805a26e-319c-4afe-8b7d-25b6c90ac558 ==============================
+[0m09:36:26.672314 [info ] [MainThread]: Running with dbt=1.9.0
+[0m09:36:26.673344 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/app', 'version_check': 'True', 'debug': 'False', 'log_path': '/usr/app/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug --profiles-dir /usr/app', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:36:26.681712 [info ] [MainThread]: dbt version: 1.9.0
+[0m09:36:26.682937 [info ] [MainThread]: python version: 3.11.2
+[0m09:36:26.684201 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m09:36:26.685292 [info ] [MainThread]: os info: Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.31
+[0m09:36:26.735234 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m09:36:26.736679 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m09:36:26.737652 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m09:36:26.761483 [info ] [MainThread]: Using profiles dir at /usr/app
+[0m09:36:26.763054 [info ] [MainThread]: Using profiles.yml file at /usr/app/profiles.yml
+[0m09:36:26.764302 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt_project.yml
+[0m09:36:26.765508 [info ] [MainThread]: adapter type: spark
+[0m09:36:26.766841 [info ] [MainThread]: adapter version: 1.9.0
+[0m09:36:26.837086 [info ] [MainThread]: Configuration:
+[0m09:36:26.839439 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m09:36:26.840883 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m09:36:26.842111 [info ] [MainThread]: Required dependencies:
+[0m09:36:26.843330 [debug] [MainThread]: Executing "git --help"
+[0m09:36:26.845554 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m09:36:26.846689 [debug] [MainThread]: STDERR: "b''"
+[0m09:36:26.847698 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m09:36:26.850119 [info ] [MainThread]: Connection:
+[0m09:36:26.852774 [info ] [MainThread]:   host: spark-thrift
+[0m09:36:26.853988 [info ] [MainThread]:   port: 10000
+[0m09:36:26.855211 [info ] [MainThread]:   cluster: None
+[0m09:36:26.856522 [info ] [MainThread]:   endpoint: None
+[0m09:36:26.857783 [info ] [MainThread]:   schema: lakehouse
+[0m09:36:26.859048 [info ] [MainThread]:   organization: 0
+[0m09:36:26.860413 [info ] [MainThread]: Registered adapter: spark=1.9.0
+[0m09:36:26.899017 [debug] [MainThread]: Acquiring new spark connection 'debug'
+[0m09:36:26.899975 [debug] [MainThread]: Using spark connection "debug"
+[0m09:36:26.900735 [debug] [MainThread]: On debug: select 1 as id
+[0m09:36:26.901470 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:36:26.905017 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:36:26.906707 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (0 of 10)
+[0m09:36:28.016039 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:36:28.017425 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (9 of 10)
+[0m09:36:36.912158 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:36:36.915928 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (1 of 10)
+[0m09:36:38.020181 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:36:38.021696 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (10 of 10)
+[0m09:36:46.916006 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:36:46.918273 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (2 of 10)
+[0m09:36:48.019601 [debug] [MainThread]: Spark adapter: Error while running:
+select 1 as id
+[0m09:36:48.021253 [debug] [MainThread]: Spark adapter: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:36:48.022562 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m09:36:48.023536 [info ] [MainThread]: [31m1 check failed:[0m
+[0m09:36:48.024349 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Runtime Error
+  Could not connect to any of [('172.19.0.9', 10000)]
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m09:36:48.025896 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 110.403244, "process_in_blocks": "0", "process_kernel_time": 0.184168, "process_mem_max_rss": "99844", "process_out_blocks": "0", "process_user_time": 1.209107}
+[0m09:36:48.026905 [debug] [MainThread]: Command `dbt debug` failed at 09:36:48.026792 after 110.40 seconds
+[0m09:36:48.028047 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m09:36:48.028916 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e75902ba250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e75902bb890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e75902a4990>]}
+[0m09:36:48.031229 [debug] [MainThread]: Flushing usage events
+[0m09:36:49.268483 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:36:56.921587 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:36:56.923223 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (3 of 10)
+[0m09:37:06.926020 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:37:06.929983 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (4 of 10)
+[0m09:37:16.931819 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:37:16.935852 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (5 of 10)
+[0m09:37:26.942427 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:37:26.946482 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (6 of 10)
+[0m09:37:36.957389 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:37:36.963525 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (7 of 10)
+[0m09:37:46.965161 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:37:46.966842 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (8 of 10)
+[0m09:37:56.969319 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:37:56.971791 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (9 of 10)
+[0m09:38:06.985218 [error] [MainThread]: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:38:06.990220 [warn ] [MainThread]: Spark adapter: Warning: Could not connect to any of [('172.19.0.9', 10000)], retrying due to 'retry_all' configuration set to true.
+	Retrying in 10 seconds (10 of 10)
+[0m09:38:16.997719 [debug] [MainThread]: Spark adapter: Error while running:
+select 1 as id
+[0m09:38:16.999331 [debug] [MainThread]: Spark adapter: Could not connect to any of [('172.19.0.9', 10000)]
+[0m09:38:17.000667 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m09:38:17.003339 [info ] [MainThread]: [31m1 check failed:[0m
+[0m09:38:17.005821 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Runtime Error
+  Could not connect to any of [('172.19.0.9', 10000)]
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m09:38:17.010047 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 110.400444, "process_in_blocks": "0", "process_kernel_time": 0.213031, "process_mem_max_rss": "99828", "process_out_blocks": "0", "process_user_time": 1.241316}
+[0m09:38:17.012547 [debug] [MainThread]: Command `dbt debug` failed at 09:38:17.012226 after 110.40 seconds
+[0m09:38:17.014009 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m09:38:17.015309 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x797ead4ea8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x797eace66390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x797ead49dd10>]}
+[0m09:38:17.016883 [debug] [MainThread]: Flushing usage events
+[0m09:38:17.950724 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:39:26.876480 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77730b2c5cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77730b2bf650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77730b6c1450>]}
+
+
+============================== 09:39:26.880633 | e96293a5-b565-4001-9cf4-a60c9a389ba8 ==============================
+[0m09:39:26.880633 [info ] [MainThread]: Running with dbt=1.9.0
+[0m09:39:26.881929 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/usr/app', 'log_path': '/usr/app/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug --profiles-dir /usr/app', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:39:26.890261 [info ] [MainThread]: dbt version: 1.9.0
+[0m09:39:26.891839 [info ] [MainThread]: python version: 3.11.2
+[0m09:39:26.893159 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m09:39:26.894134 [info ] [MainThread]: os info: Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.31
+[0m09:39:26.941238 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m09:39:26.943111 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m09:39:26.944466 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m09:39:26.970295 [info ] [MainThread]: Using profiles dir at /usr/app
+[0m09:39:26.972279 [info ] [MainThread]: Using profiles.yml file at /usr/app/profiles.yml
+[0m09:39:26.973472 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt_project.yml
+[0m09:39:26.974711 [info ] [MainThread]: adapter type: spark
+[0m09:39:26.975863 [info ] [MainThread]: adapter version: 1.9.0
+[0m09:39:27.045115 [info ] [MainThread]: Configuration:
+[0m09:39:27.046672 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m09:39:27.047925 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m09:39:27.049270 [info ] [MainThread]: Required dependencies:
+[0m09:39:27.051003 [debug] [MainThread]: Executing "git --help"
+[0m09:39:27.054226 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m09:39:27.055383 [debug] [MainThread]: STDERR: "b''"
+[0m09:39:27.056152 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m09:39:27.056925 [info ] [MainThread]: Connection:
+[0m09:39:27.057936 [info ] [MainThread]:   host: spark-thrift
+[0m09:39:27.059304 [info ] [MainThread]:   port: 10000
+[0m09:39:27.060248 [info ] [MainThread]:   cluster: None
+[0m09:39:27.061278 [info ] [MainThread]:   endpoint: None
+[0m09:39:27.062497 [info ] [MainThread]:   schema: lakehouse
+[0m09:39:27.064075 [info ] [MainThread]:   organization: 0
+[0m09:39:27.065883 [info ] [MainThread]: Registered adapter: spark=1.9.0
+[0m09:39:27.104239 [debug] [MainThread]: Acquiring new spark connection 'debug'
+[0m09:39:27.105795 [debug] [MainThread]: Using spark connection "debug"
+[0m09:39:27.106716 [debug] [MainThread]: On debug: select 1 as id
+[0m09:39:27.107469 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:39:30.395083 [debug] [MainThread]: Spark adapter: Poll status: 2, query complete
+[0m09:39:30.396864 [debug] [MainThread]: SQL status: OK in 3.289 seconds
+[0m09:39:30.398795 [debug] [MainThread]: On debug: Close
+[0m09:39:30.434816 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m09:39:30.436209 [info ] [MainThread]: [32mAll checks passed![0m
+[0m09:39:30.438694 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 3.6065881, "process_in_blocks": "0", "process_kernel_time": 0.151342, "process_mem_max_rss": "99972", "process_out_blocks": "0", "process_user_time": 0.947879}
+[0m09:39:30.440590 [debug] [MainThread]: Command `dbt debug` succeeded at 09:39:30.440440 after 3.61 seconds
+[0m09:39:30.441560 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m09:39:30.442569 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77730eb24e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77730ec80c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77730ec81ad0>]}
+[0m09:39:30.443438 [debug] [MainThread]: Flushing usage events
+[0m09:39:31.563304 [debug] [MainThread]: An error was encountered while trying to flush usage events
+==================== 2026-10-27T09:41:09.433477Z | 01a17cbc-2c82-7e12-bf33-7251d36d6d28 ====================
+09:41:10.333828 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [900ms]
