@@ -1,0 +1,24 @@
+INSERT INTO
+    PG_BRONZE.SOURCE_SAOKE_CRB
+SELECT
+    src_11.ACC_FCC,
+    src_11.AMOUNT_CUR,
+    src_11.AMOUNT_LCY,
+    src_11.APP_CODE,
+    src_11.APP_ID,
+    src_11.ASSET_TYPE,
+    src_11.CATEG_CODE,
+    src_11.CO_CODE,
+    src_11.CURR,
+    src_11.CUS_ID,
+    src_11.DATE,
+    src_11.LOC_TERM,
+    src_11.MAT_DATE,
+    src_11.SBV_CODE,
+    src_11.SUB_PRO,
+    src_11.TXN_DATE,
+    src_11.VAL_DATE,
+    CAST('${ETL_DATE}' AS DATE) AS ETL_DATE,
+    CURRENT_TIMESTAMP() AS INGEST_TMS,
+    'SOURCE_SAOKE_CRB' AS SRC_STM_CODE
+FROM SOURCE.SAOKE_CRB src_11;

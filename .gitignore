@@ -1,0 +1,11 @@
+# Airflow generated files
+airflow/logs/
+airflow/airflow.cfg
+airflow/*.db
+airflow/__pycache__/
+
+# dbt generated files
+dbt/logs/
+dbt/target/
+dbt/dbt_packages/
+.env
